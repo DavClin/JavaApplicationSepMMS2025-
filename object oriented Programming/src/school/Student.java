@@ -1,24 +1,30 @@
 
 package school;
+
 import java.time.LocalDate;
+
+//properties of student
 public class Student {
-    //properties of students
     private int studentID;
     private String firstName;
     private String lastName;
     private char gender;
-    private LocalDate doB;
+    private LocalDate dOB;
     private String phoneNumber;
 
-    public Student(int studentID, String firstName, String lastName, char gender, LocalDate doB, String phoneNumber) {
+    public Student(int studentID, String firstName, String lastName, 
+                    char gender,  LocalDate dOB, String phoneNumber) {
         this.studentID = studentID;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.gender = gender;
-        this.doB = doB;
+        this.gender = gender;                                                           
+        this.dOB = dOB;
         this.phoneNumber = phoneNumber;
     }
 
+    
+    
+    
     public int getStudentID() {
         return studentID;
     }
@@ -47,15 +53,15 @@ public class Student {
         this.gender = gender;
     }
 
-    public LocalDate getDoB() {
-        return doB;
+    public LocalDate getdOB() {
+        return dOB;
     }
 
-    public void setDoB(LocalDate doB) {
-        this.doB = doB;
+    public void setdOB(LocalDate dOB) {
+        this.dOB = dOB;
     }
 
-    public String getPhoneNumber(){ 
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -63,4 +69,26 @@ public class Student {
         this.phoneNumber = phoneNumber;
     }
     
+    public void displayStudentInfo(){
+    System.out.println("StudentId:"+ studentID);
+    System.out.println("FullName:"+ firstName + " "+lastName);
+    System.out.println("Gender:"+ gender);
+    System.out.println("DOB:"+ dOB);
+    System.out.println("Phone Number:"+ phoneNumber);
+
+    }
+   public void payFees(double amount){
+        System.out.println("Amount paid: %,.2f%n"+ amount);
+    }
+     public   void payFees(double amount,String fullname){
+        System.out.printf("Amount paid: %,.2f%n", amount);
+        System.out.printf("Student full name: %s%n", fullname);
+
+            }
+       public  void payFees(double amount,String fullname,String paymentMethod){
+         System.out.printf("Amount paid: %,.2f%n", amount);                                            
+        System.out.printf("Student full name: %s%n", fullname);
+        System.out.printf("Payment mehtod: %s%n", paymentMethod);
+
+         }                                                                                                                                         
 }
